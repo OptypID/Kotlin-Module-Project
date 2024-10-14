@@ -25,9 +25,10 @@ fun readString(prompt:String, error:String ): String {
     while (true) {
         println(prompt)
         val input = scanner.nextLine().trim()
-        if (input.isBlank())
+        if (input.isBlank()) {
             println(error)
-        else
+        } else {
             return input
+        }
     }
 }

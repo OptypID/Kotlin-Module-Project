@@ -21,7 +21,9 @@ open class Menu<E : Archive>(
             if (c != null) {
                 c.lambda.invoke()
                 createCommands()
-            } else println("Такого пункта нет, введите корректный номер")
+            } else {
+                println("Такого пункта нет, введите корректный номер")
+            }
         }
     }
 
@@ -47,8 +49,9 @@ open class Menu<E : Archive>(
             val input = scanner.nextLine().toIntOrNull()
             if (input == null) {
                 println("Введите цифру")
-                printMenu()
-            } else return input
+                } else {
+                return input
+                }
         }
     }
 }
